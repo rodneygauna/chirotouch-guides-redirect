@@ -1,270 +1,385 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Title -->
-  <title>ChiroTouch User Guide</title>
-  <meta name="description" content="ChiroTouch User Guide">
-  <meta name="author" content="Rodney Gauna">
+    <!-- Title -->
+    <title>ChiroTouch User Guide</title>
+    <meta name="description" content="ChiroTouch User Guide" />
+    <meta name="author" content="Rodney Gauna" />
 
-  <!-- SEO -->
-  <meta property="og:title" content="ChiroTouch User Guide">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://guides.chirotouch.com/">
-  <meta property="og:description" content="ChiroTouch User Guide">
+    <!-- SEO -->
+    <meta property="og:title" content="ChiroTouch User Guide" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://guides.chirotouch.com/" />
+    <meta property="og:description" content="ChiroTouch User Guide" />
 
-  <!-- Automatic Redirect -->
-  <meta http-equiv="refresh" content="60; URL=https://chirotouchcommunity.force.com/cloud/s/login/" />
+    <!-- Automatic Redirect -->
+    <meta
+      http-equiv="refresh"
+      content="60; URL=https://chirotouchcommunity.force.com/cloud/s/login/"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
-    rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Styling -->
+    <style type="text/css">
+      :root {
+        --app-dark-blue: #384766;
+        --app-lite-blue: #0b9fcb;
+        --off-white: #efefef;
+        --dark-blue: #00263a;
 
-</head>
-<body>
-  <!-- Styling -->
-  <style type="text/css">
-    :root {
-      --app-dark-blue: #384766;
-      --app-lite-blue: #0B9FCB;
-      --off-white: #EFEFEF;
-      --dark-blue: #00263a;
+        --ff-primary: "Roboto", sans-serif;
+      }
 
-      --ff-primary: "Roboto", sans-serif;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+      body {
+        font-family: var(--ff-primary);
+        font-weight: 400;
+        font-size: 1.3125rem;
+        line-height: 1.6;
+      }
 
-    body {
-      font-family: var(--ff-primary);
-      font-weight: 400;
-      font-size: 1.3125rem;
-      line-height: 1.6;
-    }
+      body,
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
 
-    body,
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
-    }
+      h1,
+      h2,
+      h3 {
+        color: var(--app-lite-blue);
+        font-weight: 900;
+        line-height: 1;
+      }
 
-    h1,
-    h2,
-    h3 {
-      color: var(--app-lite-blue);
-      font-weight: 900;
-      line-height: 1;
-    }
+      h2,
+      h3,
+      p {
+        margin-bottom: 1em;
+      }
 
-    h2,
-    h3,
-    p {
-      margin-bottom: 1em;
-    }
+      h4 {
+        font-size: 1.2rem;
+        color: var(--app-lite-blue);
+      }
 
-    h4 {
-      font-size: 1.2rem;
-      color: var(--app-lite-blue);
-    }
+      img {
+        display: block;
+        max-width: 100%;
+      }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+      .text-center {
+        text-align: center;
+      }
 
-    .text-center {
-      text-align: center;
-    }
+      ul {
+        padding: 0;
+        list-style-type: none;
+      }
 
-    ul {
-      padding: 0;
-      list-style-type: none;
-    }
+      li a {
+        text-decoration: none;
+        color: var(--off-white);
+        font-size: 1rem;
+      }
 
-    li a {
-      text-decoration: none;
-      color: var(--off-white);
-      font-size: 1rem;
-    }
+      li a:hover {
+        text-decoration: underline;
+      }
 
-    li a:hover {
-      text-decoration: underline;
-    }
-
-    header,
-    section {
-      padding: 4rem 0;
-      @media (min-width: 40em) {
-        header,
-        section {
-          padding: 7rem 0;
+      header,
+      section {
+        padding: 4rem 0;
+        @media (min-width: 40em) {
+          header,
+          section {
+            padding: 7rem 0;
+          }
         }
       }
-    }
 
-    .container {
-      margin-inline: auto;
-      width: min(90%, 70.5rem);
-    }
+      .container {
+        margin-inline: auto;
+        width: min(90%, 70.5rem);
+      }
 
-    .split {
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (min-width: 40em) {
       .split {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
       }
 
-      .split > * {
-        flex-basis: 100%;
+      @media (min-width: 40em) {
+        .split {
+          flex-direction: row;
+        }
+
+        .split > * {
+          flex-basis: 100%;
+        }
+
+        .split > * + * {
+          margin-left: 2em;
+        }
       }
 
-      .split > * + * {
-        margin-left: 2em;
+      .container--narrow {
+        max-width: 34rem;
       }
-    }
 
-    .container--narrow {
-      max-width: 34rem;
-    }
+      .bg-light {
+        background-color: var(--off-white);
+      }
 
-    .bg-light {
-      background-color: var(--off-white);
-    }
+      .bg-primary {
+        color: var(--off-white);
+        background-color: var(--app-lite-blue);
+      }
 
-    .bg-primary {
-      color: var(--off-white);
-      background-color: var(--app-lite-blue);
-    }
+      .bg-dark {
+        color: var(--off-white);
+        background-color: var(--dark-blue);
+      }
 
-    .bg-dark {
-      color: var(--off-white);
-      background-color: var(--dark-blue);
-    }
+      .bg-primary h2,
+      .bg-dark h2 {
+        color: var(--app-dark-blue);
+      }
+    </style>
 
-    .bg-primary h2,
-    .bg-dark h2 {
-      color: var(--app-dark-blue);
-    }
-  </style>
+    <!-- Content -->
+    <!-- Header -->
+    <section class="text-center">
+      <div class="container container--narrow">
+        <img
+          src="https://www.chirotouch.com/wp-content/themes/chirotouch/assets/img/redesign-logo.png"
+        />
+      </div>
+    </section>
 
-  <!-- Content -->
-  <!-- Header -->
-  <section class="text-center">
-     <div class="container container--narrow">
-      <img src="https://www.chirotouch.com/wp-content/themes/chirotouch/assets/img/redesign-logo.png">
-     </div>
-   </section>
+    <!-- Body -->
+    <section class="text-center">
+      <div class="container">
+        <h2>ChiroTouch User Guide</h2>
+        <div>
+          <p>
+            The User’s Guide for ChiroTouch Core and ChiroTouch Advanced is no
+            longer being updated. Please go to
+            <a href="https://chirotouchcommunity.force.com/cloud/s/login/">
+              ChiroTouch Community
+            </a>
+            for the most recent information, including articles, videos, and
+            courses, to help you learn more about ChiroTouch!
+          </p>
+        </div>
+      </div>
+    </section>
 
-   <!-- Body -->
-   <section class="text-center">
-     <div class="container">
-       <h2>ChiroTouch User Guide</h2>
-         <div>
-           <p>The User’s Guide for ChiroTouch Core and ChiroTouch Advanced is no longer being updated. Please go to <a href="https://chirotouchcommunity.force.com/cloud/s/login/">ChiroTouch Community</a> for the most recent information, including articles, videos, and courses, to help you learn more about ChiroTouch!</p>
-         </div>
-     </div>
-   </section>
+    <section>
+      <div class="container container--narrow">
+        <div class="text-center">
+          <p>
+            If you are not redirected in the next
+            <span id="counter">30</span>
+            seconds,
+            <a href="https://chirotouchcommunity.force.com/cloud/s/login/">
+              click here.
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-   <section>
-     <div class="container container--narrow">
-         <div class="text-center">
-           <p>If you are not redirected in the next <span id="counter">30</span> seconds, <a href="https://chirotouchcommunity.force.com/cloud/s/login/">click here</a>.</p>
-         </div>
-     </div>
-   </section>
-
-   <!-- Footer -->
-   <section class="bg-dark">
-     <div class="container">
-       <div class="split">
-         <div>
-          <h4>Products and Services</h4>
-          <ul>
-            <li><a href="https://www.chirotouch.com/products-and-services/practice-management-software/">Practice Management Software</a></li>
-            <li><a href="https://www.chirotouch.com/products-and-services/additional-services/">Additional Services</a></li>
-            <li><a href="https://www.chirotouch.com/products-and-services/integrated-partner-services/">Integrated Partner Services</a></li>
-            <li><a href="https://www.chirotouch.com/pricing/">Pricing</a></li>
-          </ul>
-         </div>
-         <div>
-           <h4>Solutions</h4>
-           <ul>
-              <li><a href="https://www.chirotouch.com/solutions/role/solutions-dc/">For Providers</a></li>
-              <li><a href="https://www.chirotouch.com/solutions/role/solutions-ca/">For CAs</a></li>
-              <li><a href="https://www.chirotouch.com/solutions/role/solutions-biller/">For Billers</a></li>
-              <li><a href="https://www.chirotouch.com/solutions/practice-type/">Practice Type</a></li>
-              <li><a href="https://www.chirotouch.com/solutions/your-journey/">Your Journey</a></li>
+    <!-- Footer -->
+    <section class="bg-dark">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h4>Products and Services</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/products-and-services/practice-management-software/"
+                >
+                  Practice Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/products-and-services/additional-services/"
+                >
+                  Additional Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/products-and-services/integrated-partner-services/"
+                >
+                  Integrated Partner Services
+                </a>
+              </li>
+              <li><a href="https://www.chirotouch.com/pricing/">Pricing</a></li>
             </ul>
-         </div>
-         <div>
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="https://www.chirotouch.com/resources/?type=testimonial">Testimonials</a></li>
-            <li><a href="https://www.chirotouch.com/resources/?type=on-demand-webinar%2Clive-webinar">Webinars</a></li>
-            <li><a href="https://www.chirotouch.com/resources/?type=checklist">Checklists</a></li>
-            <li><a href="https://www.chirotouch.com/resources/?type=article">Articles</a></li>
-            <li><a href="https://www.chirotouch.com/resources/?type=infographic">Infographics</a></li>
-            <li><a href="https://www.chirotouch.com/resources/?type=video">Videos</a></li>
-          </ul>
-         </div>
-         <div>
-           <h4>Company</h4>
-           <ul class="sub-menu">
-            <li><a href="https://www.chirotouch.com/company/about-us/">About Us</a></li>
-            <li><a href="https://www.chirotouch.com/careers/">Careers</a></li>
-            <li><a href="https://www.chirotouch.com/support/">Support</a></li>
-            <li><a href="https://www.chirotouch.com/resources/?type=event">Events</a></li>
-            <li><a href="https://www.chirotouch.com/partners/">Partners</a></li>
-            <li><a href="https://www.chirotouch.com/contact-us/">Contact Us</a></li>
-            <li><a href="https://www.chirotouch.com/privacy-policy">Privacy Policy</a></li>
-            <li><a href="https://www.chirotouch.com/onc-health-it/">ONC Health IT – Costs &amp; Limitations</a></li>
-          </ul>
-         </div>
-       </div>
-     </div>
-     <div style="padding-right: 10px;">
-       <p style="font-size: 1.0rem; text-align-last: right;">&copy; 2022 ChiroTouch. All Rights Reserved.</p>
-     </div>
-   </section>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/solutions/role/solutions-dc/"
+                >
+                  For Providers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/solutions/role/solutions-ca/"
+                >
+                  For CAs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/solutions/role/solutions-biller/"
+                >
+                  For Billers
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/solutions/practice-type/">
+                  Practice Type
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/solutions/your-journey/">
+                  Your Journey
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/resources/?type=testimonial"
+                >
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/resources/?type=on-demand-webinar%2Clive-webinar"
+                >
+                  Webinars
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/resources/?type=checklist">
+                  Checklists
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/resources/?type=article">
+                  Articles
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.chirotouch.com/resources/?type=infographic"
+                >
+                  Infographics
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/resources/?type=video">
+                  Videos
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul class="sub-menu">
+              <li>
+                <a href="https://www.chirotouch.com/company/about-us/">
+                  About Us
+                </a>
+              </li>
+              <li><a href="https://www.chirotouch.com/careers/">Careers</a></li>
+              <li><a href="https://www.chirotouch.com/support/">Support</a></li>
+              <li>
+                <a href="https://www.chirotouch.com/resources/?type=event">
+                  Events
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/partners/">Partners</a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/contact-us/">Contact Us</a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/privacy-policy">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="https://www.chirotouch.com/onc-health-it/">
+                  ONC Health IT – Costs &amp; Limitations
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="padding-right: 10px">
+        <p style="font-size: 1rem; text-align-last: right">
+          &copy; 2022 ChiroTouch. All Rights Reserved.
+        </p>
+      </div>
+    </section>
 
-   <!-- JavaScript -->
-   <script type="text/javascript">
-    // Countdown
-    function countdown(minutes) {
-      var seconds = 60;
-      var mins = minutes
-      function tick() {
-          //This script expects an element with an ID = "counter". You can change that to what ever you want. 
+    <!-- JavaScript -->
+    <script type="text/javascript">
+      // Countdown
+      function countdown(minutes) {
+        var seconds = 60;
+        var mins = minutes;
+        function tick() {
+          //This script expects an element with an ID = "counter". You can change that to what ever you want.
           var counter = document.getElementById("counter");
-          var current_minutes = mins-1
+          var current_minutes = mins - 1;
           seconds--;
           counter.innerHTML = (seconds < 10 ? "0" : "") + String(seconds);
-          if( seconds > 0 ) {
-              setTimeout(tick, 1000);
+          if (seconds > 0) {
+            setTimeout(tick, 1000);
           } else {
-              if(mins > 1){
-                  countdown(mins-1);           
-              }
+            if (mins > 1) {
+              countdown(mins - 1);
+            }
           }
+        }
+        tick();
       }
-      tick();
-  }
-  countdown(1);
-   </script>
-
-</body>
+      countdown(1);
+    </script>
+  </body>
 </html>
